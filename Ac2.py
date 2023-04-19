@@ -29,6 +29,11 @@ def busca(funcionarios_id):
         return jsonify(consulta), 200
     else:
         return jsonify({"mensagem": "Funcionario não encontrado"}), 404
+    
+@app.route("/funcionarios/", methods=['GET'])
+def consulta_funcionarios():
+    return jsonify(funcionarios)
+    
 
 
 if __name__ == '__main__':
